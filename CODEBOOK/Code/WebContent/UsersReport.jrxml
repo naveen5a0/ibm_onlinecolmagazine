@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE jasperReport
+PUBLIC "-//JasperReports//DTD Report Design//EN"
+"http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="Database_Report">
+	
+		
+	<field name="FIRST_NAME" class="java.lang.String" />
+	<field name="EMAIL" class="java.lang.String" />
+	<field name="COLLEGE" class="java.lang.String" />
+	<field name="ROLL_NUMBER" class="java.lang.String" />
+	<field name="DATE_OF_REG" class="java.lang.String" />
+	<field name="ARTICLES_POSTED" class="java.lang.String" />
+	<field name="ARTICLES_ACCEPTED" class="java.lang.String" />
+	<field name="ARTICLES_REJECTED" class="java.lang.String" />
+		
+	<title>
+	<band height="79">
+		<staticText>
+			<reportElement x="100" y="44" width="10000" height="20"/>
+			<textElement/>
+			<text><![CDATA[Users Report(Name,Email,College,Reg Date,Roll,Articles Posted,Articles Accepted,Articles Rejected)]]></text>
+		</staticText>
+	</band>
+	</title>
+	
+	<detail>
+	  <band height="20">
+		<textField>
+			<reportElement x="30" y="0" width="60" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{FIRST_NAME}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="110" y="0" width="150" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{EMAIL}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="250" y="0" width="200" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{COLLEGE}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="360" y="0" width="100" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{ROLL_NUMBER}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="300" y="0" width="100" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{DATE_OF_REG}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="450" y="0" width="30" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{ARTICLES_POSTED}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="500" y="0" width="30" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{ARTICLES_ACCEPTED}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="550" y="0" width="30" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{ARTICLES_REJECTED}]]>
+			</textFieldExpression>
+		</textField>
+	  </band>
+	</detail>
+	<summary>
+		<band height="50">
+			<staticText>
+				<reportElement x="209" y="17" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[End of report]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

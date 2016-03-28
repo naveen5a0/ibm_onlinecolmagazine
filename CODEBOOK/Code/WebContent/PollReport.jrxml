@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE jasperReport
+PUBLIC "-//JasperReports//DTD Report Design//EN"
+"http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="Database_Report">
+	
+		
+	<field name="POLL_QUESTION" class="java.lang.String" />
+	<field name="POLL_OPTIONS" class="java.lang.String" />
+	<field name="POLL_RESULTS" class="java.lang.String" />
+		
+	<title>
+	<band height="79">
+		<staticText>
+			<reportElement x="100" y="44" width="10000" height="20"/>
+			<textElement/>
+			<text><![CDATA[Poll Report(Poll Question,Poll Options,Poll Results)]]></text>
+		</staticText>
+	</band>
+	</title>
+	
+	<detail>
+	  <band height="20">
+		<textField>
+			<reportElement x="10" y="0" width="250" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{POLL_QUESTION}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="270" y="0" width="250" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{POLL_OPTIONS}]]>
+			</textFieldExpression>
+		</textField>
+		<textField>
+			<reportElement x="500" y="0" width="200" height="20" />
+			<textFieldExpression class="java.lang.String">
+				<![CDATA[$F{POLL_RESULTS}]]>
+			</textFieldExpression>
+		</textField>
+	  </band>
+	</detail>
+	<summary>
+		<band height="50">
+			<staticText>
+				<reportElement x="209" y="17" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[End of report]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
